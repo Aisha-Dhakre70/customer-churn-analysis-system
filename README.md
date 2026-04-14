@@ -205,7 +205,7 @@ The system balances prediction with actionable insights to minimize both risks.
 ---
 
 ## Project Structure
-    customer-churn-project/
+    customer-churn-analysis-system/
     │
     ├── data/
     |   └── raw/
@@ -235,8 +235,8 @@ The system balances prediction with actionable insights to minimize both risks.
     ├── app.py
     ├── requirements.txt
     ├── insights.md
-    └── README.md
-
+    ├── README.md
+    └── LICENSE
 ---
 
 ## Pretrained Model
@@ -245,7 +245,7 @@ A pre-trained model (model.pkl) is included in the repository for quick testing 
 
 Users can directly run the Streamlit application without retraining the model.
 
-> Note: The model was trained using the dataset referenced above. To retrain the model, follow the notebooks and sql files provided in the notebooks/ and sql/ directories, respectively, in this order: schema.sql < procedures.sql < data_loading.ipnyb < model.ipnyb
+> Note: The model was trained using the dataset referenced above. To retrain the model, follow the notebooks and sql files provided in the `notebooks/` and `sql/` directories, respectively, in this order: `schema.sql` < `procedures.sql` < `data_loading.ipnyb` < `model.ipnyb`
 
 ---
 
