@@ -131,6 +131,8 @@ Examples:
 
 Recommendations are rule-based and business-aligned, making them easy to interpret and implement.
 
+---
+
 ## Advanced SQL Insights
 
 The project integrates SQL stored procedures to generate business-critical insights:
@@ -191,9 +193,12 @@ The system balances prediction with actionable insights to minimize both risks.
 ## Project Structure
     customer-churn-project/
     │
+    ├── data/
+    |   └── raw/
+    |
     ├── pages/
-    │   ├── dashboard.py
-    │   └── what-if.py
+    │   ├── 1 📊 Churn Analysis Dashboard.py
+    │   └── 2 🎯 Customer Risk Analysis.py
     │
     ├── src/
     │   ├── recommendation.py
@@ -202,9 +207,20 @@ The system balances prediction with actionable insights to minimize both risks.
     │
     ├── models/
     │   └── model.pkl
-    │
-    ├── app.py
+    |
+    ├── notebooks/
+    │   ├── data_loading.ipnyb
+    │   ├── eda.ipnyb
+    │   └── model.ipnyb
+    |
+    ├── sql/
+    │   ├── schema.sql
+    │   ├── queries.sql
+    │   └── procedures.sql
+    |
+    ├── App.py
     ├── requirements.txt
+    ├── insights.md
     └── README.md
 
 ---
