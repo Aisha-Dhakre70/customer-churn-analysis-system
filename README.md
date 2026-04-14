@@ -75,6 +75,8 @@ The dataset includes customer information across multiple dimensions:
 - Handles categorical features using encoding techniques
 - Outputs probability score used for risk classification
 
+The model is optimized for identifying high-risk customers to support proactive retention strategies.
+
 ### Output:
 - Churn Probability
 - Risk Category (High / Medium / Low)
