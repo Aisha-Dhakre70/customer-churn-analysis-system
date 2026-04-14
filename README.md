@@ -121,12 +121,6 @@ The system dynamically:
 - Compares original vs scenario outcomes
 - Shows whether risk increases or decreases
 
-Example:
-Scenario	Churn Probability
-Original	0.42
-With Tech Support	0.28
-Long-term Contract	0.19
-
 | Scenario           | Churn Probability |
 | ------------------ | ----------------- |
 | Original           | 0.42              |
