@@ -53,7 +53,7 @@ def get_churn_by_segments():
 
 # LOAD MODEL
 def load_model():
-    return joblib.load("C:/Users/User/OneDrive/Desktop/Semester - 8/customer-churn-project/models/model.pkl")
+    return joblib.load("../models/model.pkl")
 
 # GET DATA
 def get_data():
