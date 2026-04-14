@@ -227,7 +227,7 @@ The system balances prediction with actionable insights to minimize both risks.
 
 ## Run Locally
     pip install -r requirements.txt
-    streamlit run app.py
+    streamlit run App.py
 
 ---
 
