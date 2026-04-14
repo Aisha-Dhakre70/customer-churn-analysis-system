@@ -1,2 +1,249 @@
-# customer-churn-analysis
-An end-to-end analytics and decision-support system that predicts customer churn risk and enables scenario-based simulation to evaluate how business actions impact retention. The project combines machine learning, SQL-based business insights, and an interactive Streamlit application to support data-driven customer retention strategies.
+# Customer Churn Prediction & What-If Analysis System
+An end-to-end analytics and decision-support system that predicts customer churn risk and enables scenario-based simulation to evaluate how business actions impact retention.
+
+The project combines machine learning, SQL-based business insights, and an interactive Streamlit application to support **data-driven customer retention strategies**.
+
+---
+
+## Problem Statement
+
+Customer churn is a major challenge for subscription-based businesses. Losing customers not only impacts revenue but also increases acquisition costs.
+
+Traditional churn prediction systems identify high-risk customers but fail to answer:
+
+- *What actions can reduce churn?*
+- *How will changes affect customer behavior?*
+
+This project addresses these gaps by building a system that not only predicts churn but also **simulates business decisions and recommends actions**.
+
+---
+
+## Objectives
+- Predict customer churn probability using machine learning
+- Identify key drivers of churn through data analysis
+- Enable what-if analysis for scenario simulation
+- Provide actionable retention recommendations
+- Deliver insights through an interactive dashboard
+
+---
+
+## Features
+- Churn Probability Prediction using trained ML models
+- Interactive Dashboard with KPIs and EDA visualizations
+- What-If Analysis Engine to simulate customer scenarios
+- Recommendation System for retention strategies
+- SQL Stored Procedures for business insights
+- Risk Categorization (High / Medium / Low)
+- User-friendly Streamlit Interface
+
+---
+
+## Tech Stack
+- Python
+- Pandas, NumPy
+- Scikit-learn
+- Streamlit
+- Plotly
+- MySQL (SQL + Stored Procedures)
+
+---
+
+## Dataset
+
+The dataset includes customer information across multiple dimensions:
+
+### Key Features:
+- Demographics (gender, senior citizen, partner, dependents)
+- Account details (contract type, billing method, tenure)
+- Services (internet service, tech support, streaming, etc.)
+- Financials (monthly charges, total charges)
+
+### Target Variable:
+- Churn (1 = Churned, 0 = Retained)
+
+---
+
+## Model Overview
+- Machine learning model trained to predict churn probability
+- Handles categorical features using encoding techniques
+- Outputs probability score used for risk classification
+
+### Output:
+- Churn Probability
+- Risk Category (High / Medium / Low)
+
+---
+
+## Dashboard Insights
+
+The dashboard highlights key churn drivers:
+
+- Month-to-month contracts have the highest churn
+- Customers with low tenure are more likely to leave
+- Higher monthly charges correlate with higher churn
+- Lack of tech support increases churn risk
+
+These insights guide business strategies for customer retention.
+
+---
+
+## What-If Analysis
+
+This system goes beyond prediction by enabling scenario simulation.
+
+Users can modify key customer attributes such as:
+
+- Contract type
+- Monthly charges
+- Payment method
+- Service subscriptions
+
+The system dynamically:
+- Recalculates churn probability
+- Compares original vs scenario outcomes
+- Shows whether risk increases or decreases
+
+Example:
+Scenario	Churn Probability
+Original	0.42
+With Tech Support	0.28
+Long-term Contract	0.19
+
+| Scenario           | Churn Probability |
+| ------------------ | ----------------- |
+| Original           | 0.42              |
+| With Tech Support  | 0.28              |
+| Long-term Contract | 0.19              |
+
+This helps businesses evaluate the impact of retention strategies before implementation.
+
+---
+
+## Recommendation Engine
+
+The system provides actionable suggestions based on customer risk:
+
+Examples:
+- Offer discounts for high monthly charges
+- Encourage long-term contracts
+- Provide tech support services
+- Improve early customer engagement
+
+Recommendations are rule-based and business-aligned, making them easy to interpret and implement.
+
+## Advanced SQL Insights
+
+The project integrates SQL stored procedures to generate business-critical insights:
+
+### Key Metrics:
+- Revenue at risk due to churn
+- High-risk customer segments
+- Customers above risk thresholds
+
+These insights complement ML predictions with data-driven business intelligence.
+
+---
+
+## Business Impact
+
+This system supports decision-making by combining prediction with action.
+
+- Identifies high-risk customers proactively
+- Simulates impact of retention strategies
+- Reduces revenue loss due to churn
+- Enables data-driven business decisions
+
+In real-world applications, this can:
+
+- Improve customer retention
+- Optimize pricing and service strategies
+- Increase customer lifetime value
+
+---
+
+## Risk Consideration
+
+Different prediction outcomes have different impacts:
+
+- False Negatives → Missing high-risk customers → Revenue loss
+- False Positives → Over-targeting low-risk customers → Resource inefficiency
+
+The system balances prediction with actionable insights to minimize both risks.
+
+---
+
+## Limitations
+- Model performance depends on data quality
+- Rule-based recommendations may not cover all scenarios
+- Dataset may not fully represent all customer behaviors
+
+---
+
+## Future Improvements
+- Add real-time data integration
+- Enhance recommendation engine using ML
+- Deploy as a cloud-based application
+- Integrate customer segmentation models
+- Add explainability (e.g., SHAP) for deeper insights
+
+---
+
+## Project Structure
+    customer-churn-project/
+    │
+    ├── pages/
+    │   ├── dashboard.py
+    │   └── what-if.py
+    │
+    ├── src/
+    │   ├── recommendation.py
+    │   ├── decision.py
+    │   └── utils.py
+    │
+    ├── models/
+    │   └── model.pkl
+    │
+    ├── app.py
+    ├── requirements.txt
+    └── README.md
+
+---
+
+## Run Locally
+    pip install -r requirements.txt
+    streamlit run app.py
+
+---
+
+## Screenshots
+
+Add dashboard and what-if analysis screenshots here
+
+---
+
+## Key Learning Outcomes
+- Building end-to-end ML systems
+- Designing interactive data applications
+- Implementing what-if analysis for decision support
+- Integrating SQL with ML workflows
+- Translating data insights into business actions
+
+---
+
+## Why This Project Matters
+
+This project demonstrates how machine learning can move beyond prediction to become a decision-support system.
+
+It reflects real-world challenges such as:
+
+- Customer retention
+- Business trade-offs
+- Actionable analytics
+
+---
+
+## Conclusion
+
+This project combines machine learning, business intelligence, and interactive analytics to address customer churn.
+
+By integrating prediction, simulation, and recommendations, it provides a practical framework for data-driven decision-making in real-world business environments.
