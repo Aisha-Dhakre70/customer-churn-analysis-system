@@ -3,8 +3,8 @@ import pandas as pd
 import streamlit as st
 import joblib
 
-# CREATE SQL CONNECTION
-engine = create_engine("mysql+pymysql://root:szgw_14051@localhost/customer_db")
+# CREATE SQL CONNECTION (replace <your-password> with the SQL server password)
+engine = create_engine("mysql+pymysql://root:<your-password>@localhost/customer_db")
 
 # LOAD DATA
 @st.cache_data
