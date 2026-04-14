@@ -1,7 +1,7 @@
 # Customer Churn Prediction & What-If Analysis System
 An end-to-end analytics and decision-support system that predicts customer churn risk and enables scenario-based simulation to evaluate how business actions impact retention.
 
-The project combines machine learning, SQL-based business insights, and an interactive Streamlit application to support **data-driven customer retention strategies**.
+Unlike traditional churn models, this system not only predicts risk but also recommends actionable strategies and quantifies their impact through what-if analysis.
 
 ---
 
@@ -64,7 +64,7 @@ The dataset includes customer information across multiple dimensions:
 ### Source:
 - [Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
 
-> Note: The dataset is not included in this repository Please download it from the provided Kaggle link and place it inside the data/raw/ directory before running the project.
+> Note: The dataset is not included in this repository. Please download it from the provided Kaggle link and place it inside the data/raw/ directory before running the project.
 
 ---
 
@@ -78,6 +78,15 @@ The dataset includes customer information across multiple dimensions:
 ### Output:
 - Churn Probability
 - Risk Category (High / Medium / Low)
+
+---
+
+## System Design Highlights
+
+- Modular architecture separating data loading, business logic, and UI
+- Shared state management across pages using Streamlit session_state
+- Feature alignment using model.feature_names_in_ to prevent mismatch errors
+- Efficient SQL integration with stored procedures for scalable analytics
 
 ---
 
@@ -136,13 +145,13 @@ Examples:
 - Provide tech support services
 - Improve early customer engagement
 
-Recommendations are rule-based and business-aligned, making them easy to interpret and implement.
+Recommendations are rule-based and business-aligned, making them easy to interpret and implement. This bridges the gap between model predictions and real-world business actions.
 
 ---
 
 ## Advanced SQL Insights
 
-The project integrates SQL stored procedures to generate business-critical insights:
+Stored procedures are used to encapsulate business logic and improve query performance. The project integrates SQL stored procedures to generate business-critical insights:
 
 ### Key Metrics:
 - Revenue at risk due to churn
@@ -225,7 +234,7 @@ The system balances prediction with actionable insights to minimize both risks.
     │   ├── queries.sql
     │   └── procedures.sql
     |
-    ├── App.py
+    ├── app.py
     ├── requirements.txt
     ├── insights.md
     └── README.md
@@ -244,7 +253,7 @@ Users can directly run the Streamlit application without retraining the model.
 
 ## Run Locally
     pip install -r requirements.txt
-    streamlit run App.py
+    streamlit run app.py
 
 > The app uses a pre-trained model, so no training step is required.
 ---
@@ -271,7 +280,7 @@ Users can directly run the Streamlit application without retraining the model.
 
 ## Key Learning Outcomes
 - Building end-to-end ML systems
-- Designing interactive data applications
+- Designing user-centric data applications for business decision support
 - Implementing what-if analysis for decision support
 - Integrating SQL with ML workflows
 - Translating data insights into business actions
