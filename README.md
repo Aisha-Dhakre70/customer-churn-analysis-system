@@ -61,10 +61,17 @@ The dataset includes customer information across multiple dimensions:
 ### Target Variable:
 - Churn (1 = Churned, 0 = Retained)
 
+### Source:
+- [Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
+
+> Note: The dataset is not included in this repository Please download it from the provided Kaggle link and place it inside the data/raw/ directory before running the project.
+
 ---
 
 ## Model Overview
 - Machine learning model trained to predict churn probability
+- ROC-AUC: ~0.93
+- Uses SMOTE to handle class imbalance
 - Handles categorical features using encoding techniques
 - Outputs probability score used for risk classification
 
@@ -225,15 +232,40 @@ The system balances prediction with actionable insights to minimize both risks.
 
 ---
 
+## Pretrained Model
+
+A pre-trained model (model.pkl) is included in the repository for quick testing and demonstration purposes.
+
+Users can directly run the Streamlit application without retraining the model.
+
+> Note: The model was trained using the dataset referenced above. To retrain the model, follow the notebooks and sql files provided in the notebooks/ and sql/ directories, respectively, in this order: schema.sql < procedures.sql < data_loading.ipnyb < model.ipnyb
+
+---
+
 ## Run Locally
     pip install -r requirements.txt
     streamlit run App.py
 
+> The app uses a pre-trained model, so no training step is required.
 ---
 
 ## Screenshots
 
-Add dashboard and what-if analysis screenshots here
+### Churn Analysis Dashboard
+
+<img width="1854" height="899" alt="image" src="https://github.com/user-attachments/assets/9d8f7ed9-998f-45f2-aab3-306bd979a94e" />
+
+<img width="1915" height="894" alt="image" src="https://github.com/user-attachments/assets/c326a738-93e8-4e8f-9ed8-0852600e2de0" />
+
+<img width="1919" height="867" alt="image" src="https://github.com/user-attachments/assets/26146c3d-b1bc-4149-afd4-ef12304542dd" />
+
+<img width="1919" height="711" alt="image" src="https://github.com/user-attachments/assets/1afd5274-e3d6-4b73-9351-c3b01584ec42" />
+
+### Customer Risk Analysis
+
+<img width="1919" height="822" alt="image" src="https://github.com/user-attachments/assets/189e3498-0885-4e06-ab39-3ee54a90248f" />
+
+<img width="1919" height="853" alt="image" src="https://github.com/user-attachments/assets/b8ca832a-c089-4906-b437-b9f7ae1f75de" />
 
 ---
 
