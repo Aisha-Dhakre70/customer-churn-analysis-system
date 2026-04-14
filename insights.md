@@ -1,5 +1,3 @@
-# Customer Churn Project
-
 ## Key Insights
 - Churn rates are significantly higher among customers on month-to-month contracts, while two-year contract customers exhibit the lowest churn, suggesting that long-term contractual commitments play a critical role in improving customer retention and reducing attrition risk.
 
