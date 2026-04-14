@@ -121,6 +121,8 @@ The system dynamically:
 - Compares original vs scenario outcomes
 - Shows whether risk increases or decreases
 
+Example:
+
 | Scenario           | Churn Probability |
 | ------------------ | ----------------- |
 | Original           | 0.42              |
